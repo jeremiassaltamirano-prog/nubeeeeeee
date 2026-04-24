@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación en la Nube - ET N°28</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --accent: #f43f5e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .school-info {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .hero {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .content-block {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="school-info">Escuela Técnica N° 28 "Juan Martín Pueyrredón"</div>
+        <p>4to Año - Instalación de Software</p>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Programación en la Nube</h1>
+            <p>La evolución de la infraestructura: del servidor físico al despliegue global.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section>
+            <h2>Conceptos Clave</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">SaaS</span>
+                    <h3>Software como Servicio</h3>
+                    <p>Aplicaciones listas para usar a través de un navegador, sin instalaciones locales. Ejemplo: Google Workspace o Slack.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">PaaS</span>
+                    <h3>Plataforma como Servicio</h3>
+                    <p>Entornos donde los desarrolladores crean y despliegan apps sin gestionar el sistema operativo. Ejemplo: Heroku, Firebase.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">IaaS</span>
+                    <h3>Infraestructura como Servicio</h3>
+                    <p>Recursos informáticos virtualizados (servidores, redes, almacenamiento). Ejemplo: AWS (EC2), Azure, Google Cloud.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;">
+            <h2>¿Por qué Cloud Computing?</h2>
+            <div class="content-block">
+                <p>En la materia <span class="highlight">Instalación de Software</span>, entendemos que la "instalación" ha mutado. Ya no solo se trata de ejecutar un archivo .exe, sino de configurar <strong>contenedores</strong>, gestionar <strong>microservicios</strong> y entender la <strong>escalabilidad horizontal</strong>.</p>
+                <ul style="margin-top: 1.5rem; list-style-position: inside;">
+                    <li><strong>Elasticidad:</strong> Los recursos crecen según la demanda.</li>
+                    <li><strong>Pago por uso:</strong> Solo se factura lo que se consume.</li>
+                    <li><strong>Disponibilidad:</strong> Acceso desde cualquier punto con conexión a internet.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;">
+            <h2>Modelos de Despliegue</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Nube Pública</h3>
+                    <p>Servicios compartidos en la internet pública gestionados por proveedores externos.</p>
+                </div>
+                <div class="card">
+                    <h3>Nube Privada</h3>
+                    <p>Infraestructura dedicada exclusivamente a una organización, con mayor control y seguridad.</p>
+                </div>
+                <div class="card">
+                    <h3>Nube Híbrida</h3>
+                    <p>Combinación que permite compartir datos y aplicaciones entre nubes públicas y privadas.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Presentación para la materia Instalación de Software</p>
+        <p>E.T. N° 28 Juan Martín Pueyrredón - Especialidad Informática</p>
+    </footer>
+
+</body>
+</html>
+et28nube.html
+Página 9 de 11
+book
+2.2 Código fuente.
+Daniel Urquiza
+•
+10 abr
+Programación en la nube
+et28nube.html
+Texto
+
+Comentarios de la clase
